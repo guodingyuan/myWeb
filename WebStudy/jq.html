@@ -1,0 +1,251 @@
+<html>
+<head>
+<script src="./jquery-3.2.1.min.js"></script>
+<script>
+//jq初始化简单写法，相当于document对象的ready事件处理函数
+$(function(){
+	$('button#btn1').click(function(){
+			var json = null;
+			var a= $('#test-form').find('p label input');
+			var o={};
+			a.map(function(){
+			   if(this.name==="gender"){
+				  if(this.checked){
+					  if(this.value==="m")
+						 o[this.name]="Male";
+					  else
+						 o[this.name]="Female";
+				  }
+			   }else{
+				  o[this.name]=this.value;
+			   }
+			});
+			var s=$('#test-form select');
+			o[s.attr('name')]=s.find("option:selected").text();	
+			json=JSON.stringify(o);
+			alert(json);
+		})
+	
+	$('button#btn2').click(function(){
+	    var u=$('#test-div>ul');
+		['Pascal','Lua','Ruby'].forEach(function(x){
+		   u.append('<li><span>'+x+'</span></li>');
+		})
+		var i=u.find('li>span');
+		var l=i.map(function(){
+		   return this.innerHTML;
+		}).get();
+		
+		l.sort(function (x, y) {
+			if (x < y) {
+				return -1;
+			}
+			if (x > y) {
+				return 1;
+			}
+			return 0;
+		});
+
+		u.find('li').remove();
+		for(var x of l){
+		   u.append('<li><span>'+x+'</span></li>')
+		}
+	})
+	
+	
+	/*
+	绑定合适的事件处理函数，实现以下逻辑：
+
+	当用户勾上“全选”时，自动选中所有语言，并把“全选”变成“全不选”；
+
+	当用户去掉“全不选”时，自动不选中所有语言；
+
+	当用户点击“反选”时，自动把所有语言状态反转（选中的变为未选，未选的变为选中）；
+
+	当用户把所有语言都手动勾上时，“全选”被自动勾上，并变为“全不选”；
+
+	当用户手动去掉选中至少一种语言时，“全不选”自动被去掉选中，并变为“全选”。
+	*/
+	
+	var
+    form = $('#test-form1'),
+    langs = form.find('[name=lang]'),
+    selectAll = form.find('label.selectAll :checkbox'),
+    selectAllLabel = form.find('label.selectAll span.selectAll'),
+    deselectAllLabel = form.find('label.selectAll span.deselectAll'),
+    invertSelect = form.find('a.invertSelect');
+
+	// 重置初始化状态:
+	form.find('*').show().off();
+	form.find(':checkbox').prop('checked', false).off();
+	deselectAllLabel.hide();
+	// 拦截form提交事件:
+	form.off().submit(function (e) {
+		e.preventDefault();
+		alert(form.serialize());
+	});
+	
+	var ff=function(){
+	   if(selectAll.prop('checked')){
+	      selectAllLabel.hide();
+		  deselectAllLabel.show();
+		  langs.prop('checked', true)
+		}else{
+		  selectAllLabel.show();
+		  deselectAllLabel.hide();
+		  langs.prop('checked', false)
+		}
+	}
+	selectAll.click(ff)
+	selectAllLabel.click(ff)
+	deselectAllLabel.click(ff)
+	
+	invertSelect.click(function(){
+	   var b=true;
+	   langs.map(function(){
+	      if(this.checked){
+		     this.checked=false;
+			 b=false;
+		  }else
+			  this.checked=true;
+	   })
+	   if(b){
+	      selectAll.prop('checked', true)
+		  selectAllLabel.hide();
+		  deselectAllLabel.show();
+	   }else{
+	      selectAll.prop('checked', false)
+		  selectAllLabel.show();
+		  deselectAllLabel.hide();
+	   }
+	   
+	})
+	langs.click(function(){
+	    var i=0;
+		langs.map(function(){
+	      if(this.checked)
+		      i++;
+	   })
+	    if(i===langs.length){
+		  selectAll.prop('checked', true)
+		  selectAllLabel.hide();
+		  deselectAllLabel.show();
+		}else{
+		  selectAll.prop('checked', false)
+		  selectAllLabel.show();
+		  deselectAllLabel.hide();
+		}
+	})
+	
+	
+	
+	
+	
+	$.fn.external = function () {
+    // return返回的each()返回结果，支持链式调用:
+    return this.filter('a').each(function () {
+        // 注意: each()内部的回调函数的this绑定为DOM本身!
+        var a = $(this);
+        var url = a.attr('href');
+        if (url && (url.indexOf('http://')===0 || url.indexOf('https://')===0)) {
+            a.attr('href', '#0')
+             .removeAttr('target')
+             .append('<i class="icon-external"></i>')
+             .click(function () {
+                if(confirm('你确定要前往' + url + '？')) {
+                    window.open(url);
+                }
+            });
+        }
+    });
+   }
+   $('#test-external a').external();
+	
+
+	var url=$('a#baidu').attr('href');
+	$('a#baidu').attr('href', '#0')
+             .removeAttr('target')
+             .append('<i class="icon-external"></i>')
+             .click(function () {
+                if(confirm('你确定要前往' + url + '？')) {
+                    window.open(url);
+                }
+            });
+})
+
+</script>
+
+<style>
+
+a:link{
+	color:#ff0099;
+	text-decoration:none;
+	
+}  /* 未被访问的链接 */
+a:visited{
+	color:#ff0099;
+	text-decoration:none;
+} /* 已被访问的链接 */
+a:hover{
+	color:#ff0099;
+	text-decoration:underline;
+} /* 鼠标指针移动到链接上 */
+a:active{
+	color:#ff0099;
+	text-decoration:underline;
+} /* 正在被点击的链接 */
+
+.icon-external{width:16px;height:16px;display:inline-block;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#ff0099" fill-rule="evenodd" d="M16.558 6H14c-.552 0-1-.448-1-1s.448-1 1-1h5c.276 0 .526.112.707.293.18.18.293.43.293.707v5c0 .552-.448 1-1 1s-1-.448-1-1V7.386l-5.03 5.03c-.39.39-1.024.39-1.414 0-.39-.39-.39-1.023 0-1.414L16.558 6zM9 4c.552 0 1 .448 1 1s-.448 1-1 1H6v12h12v-3c0-.552.448-1 1-1s1 .448 1 1v3c0 1.105-.895 2-2 2H6c-1.105 0-2-.895-2-2V6c0-1.105.895-2 2-2h3z"/></svg>');background-size:cover;background-position:0 2px}
+
+</style>
+
+<body>
+<!-- HTML结构 -->
+<form id="test-form" action="#0" onsubmit="return false;">
+    <p><label>Name: <input name="name"></label></p>
+    <p><label>Email: <input name="email"></label></p>
+    <p><label>Password: <input name="password" type="password"></label></p>
+    <p>Gender: <label><input name="gender" type="radio" value="m" checked> Male</label> <label><input name="gender" type="radio" value="f"> Female</label></p>
+    <p><label>City: <select name="city">
+        <option value="BJ" selected>Beijing</option>
+        <option value="SH">Shanghai</option>
+        <option value="CD">Chengdu</option>
+        <option value="XM">Xiamen</option>
+    </select></label></p>
+    <p><button type="submit" id="btn1">Submit</button></p>
+</form>
+<br/>
+<!-- HTML结构 -->
+<div id="test-div">
+    <ul>
+        <li><span>JavaScript</span></li>
+        <li><span>Python</span></li>
+        <li><span>Swift</span></li>
+    </ul>
+</div>
+<button id="btn2">增加并排序</button>
+<br/>
+<br/>
+<!-- HTML结构 -->
+<form id="test-form1" action="test">
+    <legend>请选择想要学习的编程语言：</legend>
+    <fieldset>
+        <p><label class="selectAll"><input type="checkbox"> <span class="selectAll">全选</span><span class="deselectAll">全不选</span></label> <a href="#0" class="invertSelect">反选</a></p>
+        <p><label><input type="checkbox" name="lang" value="javascript"> JavaScript</label></p>
+        <p><label><input type="checkbox" name="lang" value="python"> Python</label></p>
+        <p><label><input type="checkbox" name="lang" value="ruby"> Ruby</label></p>
+        <p><label><input type="checkbox" name="lang" value="haskell"> Haskell</label></p>
+        <p><label><input type="checkbox" name="lang" value="scheme"> Scheme</label></p>
+        <p><button type="submit">Submit</button></p>
+    </fieldset>
+</form>
+
+<!-- HTML结构 -->
+<div id="test-external">
+    <p>如何学习<a href="http://jquery.com">jQuery</a>?</p>
+    <p>首先，你要学习<a href="/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000">JavaScript</a>，并了解基本的<a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>。</p>
+</div>
+
+<a id='baidu'  href='http://www.baidu.com'>百度一下你就知道了</a>
+</body>
+</html> 

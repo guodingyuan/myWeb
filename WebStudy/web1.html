@@ -1,0 +1,805 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./mystyle.css" />
+</head>
+<body >
+
+<h1 class="myHeader">我的第一个标题，My First Header</h1>
+<hr/>
+<p style="background-color:gray;font-family:arial;color:white;font-size:30px;text-align:right">我的第一个段落，My First Paragraph</p>
+
+
+<h1>This is a heading</h1>
+<h2>This is a heading</h2>
+<h3>This is a heading</h3>
+<p id="myParagraph">这个是一个段落，This is a paragraph.
+这个是一个段落，This is a paragraph.
+这个是一个段落，This is a paragraph.
+这个是一个段落，This is a paragraph.
+这个是一个段落，This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<a href="http://www.w3school.com.cn/">This is a link</a>
+<!-- 如果把链接的 target 属性设置为 "_blank"，该链接会在新窗口中打开 -->
+<p><a id="baidu" href="http://www.baidu.com" target="_blank">百度一下，你就知道了</a></p>
+<a href="#tips">锚（跳转到爱因斯坦的公式）</a>
+<br/>
+<br/>
+<a href="http://www.w3school.com.cn/html/html_links.asp#tips">有用的提示（跳转到某个网页的锚）</a>
+<br/>
+<br/>
+
+<!-- 行注释  Ctrl+K-->
+<!-- 区块注释 
+     Ctrl+Shift+Q -->
+<a href="http://www.w3school.com.cn/html/html_links.asp"><img id="myImage" src="http://desk.fd.zol-img.com.cn/t_s960x600c5/g5/M00/02/03/ChMkJ1bKx2OIHlniAA5yw_Vb5W0AALHywPeFD4ADnLb164.jpg" width="400" height="300" /></a>	 
+
+<br />
+<b>This text is bold定义粗体文本。</b>
+<br />
+<strong>This text is strong定义加重语气。</strong>
+<br />
+<big>This text is big定义大号字。</big>
+<br />
+<em>This text is emphasized定义着重文字。</em>
+<br />
+<i>This text is italic定义斜体字。</i>
+<br />
+<small>This text is small定义小号字。</small>
+<br />
+This text contains
+<sub>subscript定义下标字。</sub>
+<br />
+This text contains
+<sup>superscript定义上标字。</sup>
+
+
+<pre>
+定义预格式文本。
+pre标签很适合显示计算机代码：
+for i = 1 to 10
+     print i
+next i
+</pre>
+
+
+<code>Computer code定义计算机代码。</code>
+<br />
+<kbd>Keyboard input定义键盘码。</kbd>
+<br />
+<tt>Teletype text定义打字机代码。</tt>
+<br />
+<samp>Sample text定义计算机代码样本。</samp>
+<br />
+<var>Computer variable定义变量。</var>
+<br />
+<p>
+<b>注释：</b>这些标签常用于显示计算机/编程代码。
+</p>
+
+
+<address>
+Written by <a href="mailto:webmaster@example.com">Donald Duck</a>.<br> 
+Visit us at:<br>
+Example.com<br>
+Box 564, Disneyland<br>
+USA
+</address>
+<br/>
+
+
+<bdo dir="rtl">
+Here is some Hebrew text,从右往左输入
+</bdo>
+<br/>
+<br/>
+
+这是长的引用：
+<blockquote>
+这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。
+</blockquote>
+这是短的引用：
+<q>
+这是短的引用。
+</q>
+使用 blockquote 元素的话，浏览器会插入换行和外边距，而 q 元素不会有任何特殊的呈现。
+<br/>
+
+
+<p>一打有 <del>二十</del> <ins>十二</ins> 件。</p>
+<br/>
+
+
+<p><abbr title="World Health Organization">WHO</abbr> 成立于 1948 年。</p>
+<p>对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息。</p>
+<br/>
+
+
+<p>The <dfn title="World Health Organization">WHO</dfn> was founded in 1948.</p>
+<p>对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息。</p>
+<br/>
+
+
+<p>浏览器通常会以斜体显示<cite>cite</cite>元素。</p>
+<br/>
+
+<a name="tips">
+<p>爱因斯坦的公式：<var>E</var> = <var>m</var> <var>c</var><sup>2</sup></p>
+<br/>
+</a>
+
+<p>这是邮件链接：<a href="mailto:958867320@qq.com?subject=Hello%20again&body=How%20are%20you?">发送邮件</a></p>
+<p><b>注意：</b>应该使用 %20 来替换单词之间的空格，这样浏览器就可以正确地显示文本了。</p>
+
+
+<p><img src="hahahh.png" alt="太好了，哈哈，图片无法显示" width="120" high="120"/></p>
+
+<p>点击不同的区域不同的效果，图像<img src="http://www.w3school.com.cn/i/eg_cute.gif" align="center" usemap="#myMap" width="100",high="100"/>显示在文本中</p>
+<map name="myMap" id="myMap">
+<area
+shape="rect"
+coords="0,0,50,100"
+href ="http://www.w3school.com.cn/i/eg_cute.gif"
+target ="_blank"
+alt="放大后的图片" />
+
+<area
+shape="rect"
+coords="50,0,100,100"
+href ="http://desk.fd.zol-img.com.cn/t_s960x600c5/g5/M00/02/03/ChMkJ1bKx2OIHlniAA5yw_Vb5W0AALHywPeFD4ADnLb164.jpg"
+target ="_blank"
+alt="放大后的图片" />
+</map>
+
+
+
+<h4>两行三列：</h4>
+<table border="4"
+cellpadding="10">
+<caption>我的标题</caption>
+<tr>
+  <th>表头1</th>
+  <th>表头2</th>
+  <th>&nbsp;</th>
+</tr>
+<tr>
+  <td rowspan="2" style="text-align:center;color:red" background="http://www.w3school.com.cn/i/eg_bg_02.gif">100</td>
+  <td colspan="2" style="text-align:center">200</td>
+</tr>
+<tr>
+  <td>
+	  <table border="1"
+	  cellpadding="10"
+	  cellspacing="10"
+	  background="http://www.w3school.com.cn/i/eg_bg_07.gif">
+	   <tr>
+		 <td>A</td>
+		 <td>B</td>
+	   </tr>
+	   <tr>
+		 <td>C</td>
+		 <td>D</td>
+	   </tr>
+	   </table>
+  </td>
+  <td>这个单元包含一个列表：
+	   <ul>
+		<li>苹果</li>
+		<li>香蕉</li>
+		<li>菠萝</li>
+	   </ul>
+   </td>
+</tr>
+</table>
+
+
+
+<h4>一个无序列表：</h4>
+<ul type="square">
+  <li>咖啡</li>
+  <li>茶</li>
+  <li>牛奶</li>
+</ul>
+
+<h4>一个有序列表：</h4>
+<ol type="i">
+  <li>咖啡</li>
+  <li>牛奶</li>
+  <li>茶</li>
+</ol>
+
+<h4>一个定义列表：</h4>
+<dl>
+   <dt>计算机</dt>
+   <dd>用来计算的仪器 ... ...</dd>
+   <dt>显示器</dt>
+   <dd>以视觉方式显示信息的装置 ... ...</dd>
+</dl>
+
+
+<div class="cities">
+<h2>London</h2>
+<p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+<p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+</div> 
+<div class="cities">
+<h2>Tokyo</h2>
+<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+and the most populous metropolitan area in the world.</p>
+</div>
+
+
+<h1>宝宝是祖国的<span class="redTextColor">花朵</span>！哈哈哈哈····</h1>
+
+
+<!-- 视频 -->
+<video src="http://www.w3school.com.cn/i/movie.ogg"  width="320" height="240" controls="controls">
+Your browser does not support the video tag.
+</video>
+
+</br>
+</br>
+<div style="text-align:center;">
+  <button onclick="playPause()">播放/暂停</button> 
+  <button onclick="makeBig()">大</button>
+  <button onclick="makeNormal()">中</button>
+  <button onclick="makeSmall()">小</button>
+  <br /> 
+  <video id="video1" width="420" style="margin-top:15px;">
+    <source src="http://www.w3school.com.cn/example/html5/mov_bbb.mp4" type="video/mp4" />
+    <source src="http://www.w3school.com.cn/example/html5/mov_bbb.ogg" type="video/ogg" />
+    Your browser does not support HTML5 video.
+  </video>
+</div> 
+
+<script type="text/javascript">
+var myVideo=document.getElementById("video1");
+
+function playPause()
+{ 
+if (myVideo.paused) 
+  myVideo.play(); 
+else 
+  myVideo.pause(); 
+} 
+
+function makeBig()
+{ 
+myVideo.width=560; 
+} 
+
+function makeSmall()
+{ 
+myVideo.width=320; 
+} 
+
+function makeNormal()
+{ 
+myVideo.width=420; 
+} 
+</script> 
+
+
+
+<!-- 音频 -->
+<audio src="http://www.w3school.com.cn/i/song.ogg" controls="controls">
+Your browser does not support the audio element.
+</audio>
+
+
+<!-- 拖放 -->
+<p>请把 W3School 的图片拖放到矩形中：</p>
+
+
+<style type="text/css">
+#div1 {width:198px; height:66px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br />
+<img id="drag1" src="http://www.w3school.com.cn/i/eg_dragdrop_w3school.gif" draggable="true" ondragstart="drag(event)" />
+<script type="text/javascript">
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</br>
+</br>
+
+
+<!-- 画布 -->
+<canvas id="myCanvas" width="180" height="300" style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+<script type="text/javascript">
+var c=document.getElementById("myCanvas");
+var cxt=c.getContext("2d");
+cxt.moveTo(10,10);
+cxt.lineTo(150,50);
+cxt.lineTo(10,50);
+cxt.stroke();
+
+cxt.fillStyle="#FF0000";
+cxt.beginPath();
+cxt.arc(70,18,15,0,Math.PI*2,true);
+cxt.closePath();
+cxt.fill();
+
+
+var grd=cxt.createLinearGradient(0,80,175,50);
+grd.addColorStop(0,"#FF0000");
+grd.addColorStop(1,"#00FF00");
+cxt.fillStyle=grd;
+cxt.fillRect(0,80,175,50);
+
+var img=new Image()
+img.src="http://www.w3school.com.cn/i/eg_flower.png"
+cxt.drawImage(img,0,150);
+</script>
+
+
+
+<!-- localStorage，sessionStorage -->
+<div id="result"></div>
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", "myLocalStorage");
+	
+	if (localStorage.pagecount){
+	   localStorage.pagecount=Number(localStorage.pagecount) +1;
+	}else{
+	   localStorage.pagecount=1;
+	}
+	
+	if (sessionStorage.pagecount){
+	   sessionStorage.pagecount=Number(sessionStorage.pagecount) +1;
+	}else{
+	   sessionStorage.pagecount=1;
+	}
+	
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("lastname")+"，localStorage-Visits: " + localStorage.pagecount + " time(s)."+"，sessionStorage -Visits: " + sessionStorage.pagecount + " time(s).";
+} else {
+    document.getElementById("result").innerHTML = "抱歉！您的浏览器不支持 Web Storage ...";
+}
+</script>
+<p>刷新页面会看到计数器在增长。</p>
+<p>请关闭浏览器窗口，然后再试一次，localStorage计数器会继续计数。</p>
+<p>请关闭浏览器窗口，然后再试一次，sessionStorage计数器已经重置了。</p>
+
+
+<!-- Web Workers -->
+<p>计数: <output id="result"></output></p>
+<button onclick="startWorker()">开始 Worker</button> 
+<button onclick="stopWorker()">停止 Worker</button>
+<br /><br />
+
+<script>
+var w;
+
+function startWorker()
+{
+if(typeof(Worker)!=="undefined")
+  {
+  if(typeof(w)=="undefined")
+  {
+  w=new Worker("./web1_worker.js");//注意：用来测试的js和html文件都需要发布到站点才可以正常访问，否则会提示这个错误：Uncaught SecurityError: Failed to construct 'Worker': Script at·····
+  }
+  w.onmessage = function (event) {
+    document.getElementById("result").innerHTML=event.data;
+    };
+  }
+else
+  {
+  document.getElementById("result").innerHTML="Sorry, your browser does not support Web Workers...";
+  }
+}
+
+function stopWorker()
+{ 
+w.terminate();
+}
+</script>
+
+
+<!-- 表单 -->
+<form action="http://www.w3school.com.cn/example/html5/demo_form.asp" method="get">
+email: <input type="email" name="user_email" /><br />
+<input type="submit" /><br />
+url: <input type="url" name="user_url" /><br />
+<input type="submit" /><br />
+number: <input type="number" name="points" min="1" max="10" />
+<input type="submit" /><br />
+range: <input type="range" name="points" min="1" max="10" />
+<input type="submit" /><br />
+date: <input type="date" name="user_date" />
+<input type="submit" /><br />
+datalist: <input type="url" list="url_list" name="link" />
+<datalist id="url_list">
+	<option label="W3School" value="http://www.w3school.com.cn" />
+	<option label="Google" value="http://www.google.com" />
+	<option label="Microsoft" value="http://www.microsoft.com" />
+</datalist>
+<input type="submit" /><br />
+keygen: <input type="text" name="usr_name" />
+Encryption: <keygen name="security" />
+<input type="image" src="http://www.w3school.com.cn/i/eg_submit.jpg" width="99" height="99" />
+<br />
+<br />
+file: <input type="file" name="img" multiple="multiple" />
+<input type="submit" />
+<p>当您浏览文件时，请试着选择多个文件。</p>
+
+Country code（正则表达式）: <input type="text" name="country_code" pattern="[A-z]{3}"
+title="Three letter country code" />
+<input type="submit" />
+<br />
+<input type="search" name="user_search" placeholder="带有提示hint的输入域" />
+<input type="submit" />
+<br />
+required（输入不能为空）: <input type="text" name="usr_name" required="required" />
+<input type="submit" />
+</form>
+
+</br>
+
+<div class="myScroll">
+如果元素中的内容超出了给定的宽度和高度属性，
+overflow 属性可以确定是否显示滚动条等行为。
+这个属性定义溢出元素内容区的内容会如何处理。
+如果值为 scroll，不论是否需要，用户代理都会提供一种滚动机制。
+因此，有可能即使元素框中可以放下所有内容也会出现滚动条。默认值是 visible。
+</div>
+
+
+<p>
+<span class="myFloat">T</span>his is some text.
+This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+</p>
+
+<p>
+在上面的段落中，文本的第一个字母包含在一个 span 元素中。这个 span 元素的宽度是当前字体尺寸的 0.7 倍。span 元素的字体尺寸是 400%，行高是 80%。span 中的字母字体是 "Algerian"
+</p>
+
+<p>请把鼠标移动到单词上，可以看到鼠标指针发生变化：</p>
+<span style="cursor:auto">
+Auto</span><br />
+<span style="cursor:crosshair">
+Crosshair</span><br />
+<span style="cursor:default">
+Default</span><br />
+<span style="cursor:pointer">
+Pointer</span><br />
+<span style="cursor:move">
+Move</span><br />
+<span style="cursor:e-resize">
+e-resize</span><br />
+<span style="cursor:ne-resize">
+ne-resize</span><br />
+<span style="cursor:nw-resize">
+nw-resize</span><br />
+<span style="cursor:n-resize">
+n-resize</span><br />
+<span style="cursor:se-resize">
+se-resize</span><br />
+<span style="cursor:sw-resize">
+sw-resize</span><br />
+<span style="cursor:s-resize">
+s-resize</span><br />
+<span style="cursor:w-resize">
+w-resize</span><br />
+<span style="cursor:text">
+text</span><br />
+<span style="cursor:wait">
+wait</span><br />
+<span style="cursor:help">
+help</span>
+
+
+<ul class="daoHang">
+	<li><a href="#home">Home</a></li>
+	<li><a href="#news">News</a></li>
+	<li><a href="#contact">Contact</a></li>
+	<li><a href="#about">About</a></li>
+</ul>
+
+
+<div class="myImg">
+	<div class="img">
+	  <a target="_blank" href="http://www.w3school.com.cn/i/tulip_ballade.jpg">
+	  <img src="http://www.w3school.com.cn/i/tulip_ballade_s.jpg" alt="Ballade" width="160" height="160">
+	  </a>
+	  <div class="desc">在此处添加对图像的描述</div>
+	</div>
+
+	<div class="img">
+	  <a target="_blank" href="http://www.w3school.com.cn/i/tulip_flaming_club.jpg">
+	  <img src="http://www.w3school.com.cn/i/tulip_flaming_club_s.jpg" alt="Ballade" width="160" height="160">
+	  </a>
+	  <div class="desc">在此处添加对图像的描述</div>
+	</div>
+
+	<div class="img">
+	  <a target="_blank" href="http://www.w3school.com.cn/i/tulip_fringed_family.jpg">
+	  <img src="http://www.w3school.com.cn/i/tulip_fringed_family_s.jpg" alt="Ballade" width="160" height="160">
+	  </a>
+	  <div class="desc">在此处添加对图像的描述</div>
+	</div>
+
+	<div class="img">
+	  <a target="_blank" href="http://www.w3school.com.cn/i/tulip_peach_blossom.jpg">
+	  <img src="http://www.w3school.com.cn/i/tulip_peach_blossom_s.jpg" alt="Ballade" width="160" height="160">
+	  </a>
+	  <div class="desc">在此处添加对图像的描述</div>
+	</div>
+</div>	
+
+<div id="myJSDiv">
+	<p id="myJs">哈哈哈哈哈哈</p>
+	<button id="firstBT" onmouseover="mOnMouseOver(this)" onmousedown="mOnmousedown(this)" onmouseout="mOnMouseOut(this)" onclick="myJSDemo1()">点我！点我！</button>
+    <button id="secondBT" onmouseover="mOnMouseOver(this)" onmousedown="mOnmousedown(this)" onmouseout="mOnMouseOut(this)">点第一个之后这个才能点击</button>
+	<br/>
+	<br/>
+	输入小写英文字符，光标离开后将变成大写：<input type="text" id="fname" onchange="myJSDemo4(this)" onfocus="mOnFocus(this)">
+	<br/>
+	<p id="myClock"></p>
+	<button onmouseover="mOnMouseOver(this)" onmousedown="mOnmousedown(this)" onmouseout="mOnMouseOut(this)" onclick="openNewFile()">加载新文档</button>
+	<button onmouseover="mOnMouseOver(this)" onmousedown="mOnmousedown(this)" onmouseout="mOnMouseOut(this)" onclick="goForward()">前进（下一个 URL）</button>
+	<div id="mNavigator">
+	</div>
+	<button onmouseover="mOnMouseOver(this)" onmousedown="mOnmousedown(this)" onmouseout="mOnMouseOut(this)" onclick="showConfirm()()">确认框</button>
+	<button onmouseover="mOnMouseOver(this)" onmousedown="mOnmousedown(this)" onmouseout="mOnMouseOut(this)" onclick="showPrompt()">提示框</button>
+	<p id="myCount"></p>
+	<button onmouseover="mOnMouseOver(this)" onmousedown="mOnmousedown(this)" onmouseout="mOnMouseOut(this)" onclick="startCount()">开始计时</button>
+	<button onmouseover="mOnMouseOver(this)" onmousedown="mOnmousedown(this)" onmouseout="mOnMouseOut(this)" onclick="stopCount()">停止计时</button>
+	<br/>
+	<br/>
+	<button onmouseover="mOnMouseOver(this)" onmousedown="mOnmousedown(this)" onmouseout="mOnMouseOut(this)" onclick="checkCookie()">Cookies</button>
+	
+	
+</div>
+
+<script>
+    function myJSDemo1(){
+        guodingyuan=999;//此处相对于全局变量
+	    myJSDemo2();
+		//以下部分为添加节点
+		var para=document.createElement("p");//创建新的 <p> 元素
+		var node=document.createTextNode("这是新添加的段落。");//创建文本节点
+		para.appendChild(node);//向 <p> 元素追加这个文本节点
+		var element=document.getElementById("myJSDiv");
+		element.appendChild(para);//向一个已有的元素追加这个新元素
+	}
+	
+	function myJSDemo2(){
+        document.getElementById("myJs").innerHTML="我的值等于"+guodingyuan;
+		var secondBT=document.getElementById("secondBT");
+		secondBT.onclick=function(){myJSDemo3()};
+		secondBT.innerHTML="判断浏览器是否已启用 cookie？";
+	}
+	
+	function myJSDemo3(alertString){
+	   if (navigator.cookieEnabled==true){
+	      alert("已启用 cookie")
+	    }else{
+	      alert("未启用 cookie")
+	    }
+	}
+	
+	function myJSDemo4(id){
+	   id.value=id.value.toUpperCase();
+	   id.style.backgroundColor="white";
+	}
+	
+	function mOnMouseOver(id){
+	    id.style.backgroundColor="red";
+	}
+	
+	function mOnmousedown(id){
+	    id.style.backgroundColor="#1ec5e5";
+	}
+	
+	function mOnMouseOut(id){
+	   id.style.backgroundColor="green";
+	}
+	
+	function mOnFocus(id){
+	   id.style.backgroundColor="yellow";
+	}
+	
+	//字符串样式
+	var txt="Hello World!"
+    document.write("<p>字符串样式</p>")
+	document.write("<p>Big: " + txt.big() + "</p>")
+	document.write("<p>Small: " + txt.small() + "</p>")
+
+	document.write("<p>Bold: " + txt.bold() + "</p>")
+	document.write("<p>Italic: " + txt.italics() + "</p>")
+
+	document.write("<p>Blink: " + txt.blink() + " (does not work in IE)</p>")
+	document.write("<p>Fixed: " + txt.fixed() + "</p>")
+	document.write("<p>Strike: " + txt.strike() + "</p>")
+
+	document.write("<p>Fontcolor: " + txt.fontcolor("Red") + "</p>")
+	document.write("<p>Fontsize: " + txt.fontsize(16) + "</p>")
+
+	document.write("<p>Lowercase: " + txt.toLowerCase() + "</p>")
+	document.write("<p>Uppercase: " + txt.toUpperCase() + "</p>")
+
+	document.write("<p>Subscript: " + txt.sub() + "</p>")
+	document.write("<p>Superscript: " + txt.sup() + "</p>")
+
+	document.write("<p>Link: " + txt.link("http://www.w3school.com.cn") + "</p>")
+	
+	//时钟
+	function startTime(){
+		var today=new Date()
+	    var y=today.getYear() 
+	    var mm=today.getMonth() 
+	    var d=today.getDay() 
+	    var h=today.getHours() 
+	    var m=today.getMinutes() 
+	    var s=today.getSeconds()
+		// add a zero in front of numbers<10
+		m=checkTime(m)
+		s=checkTime(s)
+		y+=1900
+		mm=checkTime(mm)
+		d=checkTime(d)
+		document.getElementById('myClock').innerHTML="当前时间："+y+"年"+mm+"月"+d+"日"+h+":"+m+":"+s
+		t=setTimeout('startTime()',500)
+	}
+	actionTime=startTime()//开始计时
+	
+	function checkTime(i){
+		if (i<10) {
+		  i="0" + i
+		}
+		return i
+    }
+	
+	//screen
+	var w=window.innerWidth
+	|| document.documentElement.clientWidth
+	|| document.body.clientWidth;
+	var h=window.innerHeight
+	|| document.documentElement.clientHeight
+	|| document.body.clientHeight;
+	document.write("<p>浏览器的内部窗口宽度：" + w + "，高度：" + h + "。</p>");//当前的
+    document.write("可用宽度：" + screen.availWidth + "，可用高度："+ screen.availHeight+"<br/>");//可用的
+	document.write("当前网页的网址：" + location.href +"<br/>");
+	document.write("当前 URL 的路径名："+location.pathname+"<br/>");
+	
+	//location
+	function openNewFile(){
+	   window.location.assign("http://www.w3school.com.cn")//加载新文档
+	}
+	
+	//history
+	function goForward(){
+	   window.history.forward()
+	}
+	
+	//navigator
+	txt = "<p>获取当前浏览器信息：</p>"
+	txt+= "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+	txt+= "<p>Browser Name: " + navigator.appName + "</p>";
+	txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
+	txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+	txt+= "<p>Platform: " + navigator.platform + "</p>";
+	txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+	txt+= "<p>User-agent language: " + navigator.systemLanguage + "</p>";
+    document.getElementById("mNavigator").innerHTML=txt;
+	
+	//确认框
+	function showConfirm(){
+	var r=confirm("请做出你的选择：");
+     if (r==true){
+	    alert("你选择了“确认”");
+	 }else{
+        alert("你选择了“取消”");
+     }
+	}
+	
+	//提示框
+	function showPrompt(){
+	 var name=prompt("请输入您的名字","郭锭源")
+     if (name!=null && name!=""){
+	   alert("你好！" + name + " 今天过得怎么样？");
+     }
+	}
+	
+	//计时
+	var c=0;
+	var t;
+	var isRun=false;
+	function startCount(){
+		if(isRun==false){
+		    isRun=true;
+			counting();
+		}
+	}
+	
+	function counting(){
+	    document.getElementById("myCount").innerHTML="计时器："+c;
+		c=c+1;
+		t=setTimeout("counting()",1000);
+	}
+	
+	function stopCount(){	 
+		document.getElementById("myCount").innerHTML="计时器：0";
+	    c=0;
+		clearTimeout(t);
+		isRun=false;
+	}
+	
+	//cookies
+	//根据cookie的工作原理，测试的时候都是用localhost去做的，但cookie的域必须是域名，因此造成无法正确读取cookie。(联网才有效)
+	function checkCookie(){
+		username=getCookie('username')
+		if (username!=null && username!="")
+		  {alert('欢迎 '+username+' 再次光临!')}
+		else 
+		  {
+		  username=prompt('请输入你的名字:',"")
+		  if (username!=null && username!="")
+			{
+			setCookie('username',username,365)
+			}
+		  }
+	}
+	
+	function getCookie(c_name){
+		if (document.cookie.length>0){ 
+			c_start=document.cookie.indexOf(c_name + "=")
+			if (c_start!=-1)
+			{ 
+			c_start=c_start + c_name.length+1 
+			c_end=document.cookie.indexOf(";",c_start)
+			if (c_end==-1) c_end=document.cookie.length
+			return unescape(document.cookie.substring(c_start,c_end))
+			} 
+		}
+		return ""
+	}
+
+	function setCookie(c_name,value,expiredays){
+		var exdate=new Date()
+		exdate.setDate(exdate.getDate()+expiredays)
+		document.cookie=c_name+ "=" +escape(value)+
+		((expiredays==null) ? "" : "; expires="+exdate.toGMTString())
+	}
+</script>
+
+
+</body>
+</html>
