@@ -1,4 +1,4 @@
-<html>
+ï»¿<html>
 <head>
 <script src="./jquery-3.2.1.min.js"></script>
 <script>
@@ -11,9 +11,9 @@ $(document).ready(function(){
 			$("h2").css("color","#000000");
 			$(".mHideClass").show("slow");
 			$("#mHideID").show("1000");
-			$("button#mShowHide").text("µãÎÒ");
+			$("button#mShowHide").text("ç‚¹æˆ‘");
 		});
-		$(this).text("»Ö¸´");
+		$(this).text("æ¢å¤");
 	});
 
 	$("button#mFadeIn").click(function(){
@@ -97,20 +97,20 @@ $(document).ready(function(){
 	});
 	$("#btn3").click(function(){
        alert("Value: " + $("#test2").val());
-	    $("#test2").val("ÌÆÀÏÑ¼")
+	    $("#test2").val("å”è€é¸­")
     });
 	$("#btn4").click(function(){
        alert("Attr: " + $("#test3").attr("href"));
 	   $("#test3").attr({
 	      "href":"http://www.baidu.com",
-		  "title":"°Ù¶ÈÊ×Ò³",
-	   }).text("°Ù¶ÈÍøÖ·")
+		  "title":"ç™¾åº¦é¦–é¡µ",
+	   }).text("ç™¾åº¦ç½‘å€")
     });
 	
 	
-	var txt1="<b>I </b>";                    // ÒÔ HTML ´´½¨ÔªËØ
-	var txt2=$("<i></i>").text("love ");     // Í¨¹ı jQuery ´´½¨ÔªËØ
-	var txt3=document.createElement("big");  // Í¨¹ı DOM ´´½¨ÔªËØ
+	var txt1="<b>I </b>";                    // ä»¥ HTML åˆ›å»ºå…ƒç´ 
+	var txt2=$("<i></i>").text("love ");     // é€šè¿‡ jQuery åˆ›å»ºå…ƒç´ 
+	var txt3=document.createElement("big");  // é€šè¿‡ DOM åˆ›å»ºå…ƒç´ 
 	txt3.innerHTML="jQuery!";
 	
 	$("#append").click(function(){
@@ -156,38 +156,38 @@ $(document).ready(function(){
 	$("#showWidthHeight").click(function(){
 	    var d=$("#div7");
 	    var txt="";
-		txt+="ÔªËØµÄ¿í¶È£¨²»°üÀ¨ÄÚ±ß¾à¡¢±ß¿ò»òÍâ±ß¾à£©: " + d.width() + "</br>";
-		txt+="ÔªËØµÄ¸ß¶È£¨²»°üÀ¨ÄÚ±ß¾à¡¢±ß¿ò»òÍâ±ß¾à£©: " + d.height() + "</br>";
-		txt+="ÔªËØµÄ¿í¶È£¨°üÀ¨ÄÚ±ß¾à£©: " + d.innerWidth() + "</br>";
-		txt+="ÔªËØµÄ¸ß¶È£¨°üÀ¨ÄÚ±ß¾à£©: " + d.innerHeight() + "</br>";
-		txt+="ÔªËØµÄ¿í¶È£¨°üÀ¨ÄÚ±ß¾à¡¢±ß¿òºÍÍâ±ß¾à£©: " + d.outerWidth(true) + "</br>";
-        txt+="ÔªËØµÄ¸ß¶È£¨°üÀ¨ÄÚ±ß¾à¡¢±ß¿òºÍÍâ±ß¾à£©: " + d.outerHeight(true);
+		txt+="å…ƒç´ çš„å®½åº¦ï¼ˆä¸åŒ…æ‹¬å†…è¾¹è·ã€è¾¹æ¡†æˆ–å¤–è¾¹è·ï¼‰: " + d.width() + "</br>";
+		txt+="å…ƒç´ çš„é«˜åº¦ï¼ˆä¸åŒ…æ‹¬å†…è¾¹è·ã€è¾¹æ¡†æˆ–å¤–è¾¹è·ï¼‰: " + d.height() + "</br>";
+		txt+="å…ƒç´ çš„å®½åº¦ï¼ˆåŒ…æ‹¬å†…è¾¹è·ï¼‰: " + d.innerWidth() + "</br>";
+		txt+="å…ƒç´ çš„é«˜åº¦ï¼ˆåŒ…æ‹¬å†…è¾¹è·ï¼‰: " + d.innerHeight() + "</br>";
+		txt+="å…ƒç´ çš„å®½åº¦ï¼ˆåŒ…æ‹¬å†…è¾¹è·ã€è¾¹æ¡†å’Œå¤–è¾¹è·ï¼‰: " + d.outerWidth(true) + "</br>";
+        txt+="å…ƒç´ çš„é«˜åº¦ï¼ˆåŒ…æ‹¬å†…è¾¹è·ã€è¾¹æ¡†å’Œå¤–è¾¹è·ï¼‰: " + d.outerHeight(true);
 		d.html(txt);
 	})
 	
-	$("#myAJAXLoad").click(function(){//Ö»Ö§³ÖÁªÍøµÄ£¬±¾µØÎŞ·¨¼ÓÔØ
+	$("#myAJAXLoad").click(function(){//åªæ”¯æŒè”ç½‘çš„ï¼Œæœ¬åœ°æ— æ³•åŠ è½½
 	    $("#div8").load("./web1.html  .myImg",function(responseTxt,statusTxt,xhr){
 		     if(statusTxt=="success")
-				alert("Íâ²¿ÄÚÈİ¼ÓÔØ³É¹¦£¡");
+				alert("å¤–éƒ¨å†…å®¹åŠ è½½æˆåŠŸï¼");
 			 if(statusTxt=="error")
 				alert("Error: "+xhr.status+": "+xhr.statusText);
 		})
 	})
 	
-	$("#myAJAXGet").click(function(){//Ö»Ö§³ÖÁªÍøµÄ£¬±¾µØÎŞ·¨¼ÓÔØ
+	$("#myAJAXGet").click(function(){//åªæ”¯æŒè”ç½‘çš„ï¼Œæœ¬åœ°æ— æ³•åŠ è½½
 	    $.get("http://www.w3school.com.cn/example/jquery/demo_test.asp",function(data,status){
-           alert("Êı¾İ£º" + data + "\n×´Ì¬£º" + status);
+           alert("æ•°æ®ï¼š" + data + "\nçŠ¶æ€ï¼š" + status);
          });
 	})
 	
-	$("#myAJAXPost").click(function(){//Ö»Ö§³ÖÁªÍøµÄ£¬±¾µØÎŞ·¨¼ÓÔØ
+	$("#myAJAXPost").click(function(){//åªæ”¯æŒè”ç½‘çš„ï¼Œæœ¬åœ°æ— æ³•åŠ è½½
 	    $.post("http://www.w3school.com.cn/example/jquery/demo_test_post.asp",
 				{
-				  name:"¹ù¶§Ô´",
-				  city:"¹ãÖİ"
+				  name:"éƒ­é”­æº",
+				  city:"å¹¿å·"
 				},
 				function(data,status){
-				  alert("Êı¾İ£º" + data + "\n×´Ì¬£º" + status);
+				  alert("æ•°æ®ï¼š" + data + "\nçŠ¶æ€ï¼š" + status);
 				});
 	})
 });
@@ -233,14 +233,14 @@ div#div6{
 <h2>This is a heading</h2>
 <p class="mHideClass">This is a paragraph.</p>
 <p id="mHideID">This is another paragraph.</p>
-<p id="mToggle">ÇĞ»»ÏÔÊ¾/Òş²Ø</p>
-<button id="mShowHide">µãÎÒ</button>
+<p id="mToggle">åˆ‡æ¢æ˜¾ç¤º/éšè—</p>
+<button id="mShowHide">ç‚¹æˆ‘</button>
 
-<p>ÑİÊ¾´øÓĞ²»Í¬²ÎÊıµÄ fadeIn() fadeOut() fadeToggle() fadeTo() ·½·¨¡£</p>
-<button id="mFadeIn">µã»÷ÕâÀï£¬Ê¹Èı¸ö¾ØĞÎµ­Èë</button>
-<button id="mFadeOut">µã»÷ÕâÀï£¬Ê¹Èı¸ö¾ØĞÎµ­³ö</button>
-<button id="mFadeToggle">µã»÷ÕâÀï£¬Ê¹Èı¸ö¾ØĞÎµ­Èëµ­³ö</button>
-<button id="mFadeTo">µã»÷ÕâÀï£¬Ê¹Èı¸ö¾ØĞÎ½¥±äÎª¸ø¶¨µÄ²»Í¸Ã÷¶È£¨Öµ½éÓÚ 0 Óë 1 Ö®¼ä£©</button>
+<p>æ¼”ç¤ºå¸¦æœ‰ä¸åŒå‚æ•°çš„ fadeIn() fadeOut() fadeToggle() fadeTo() æ–¹æ³•ã€‚</p>
+<button id="mFadeIn">ç‚¹å‡»è¿™é‡Œï¼Œä½¿ä¸‰ä¸ªçŸ©å½¢æ·¡å…¥</button>
+<button id="mFadeOut">ç‚¹å‡»è¿™é‡Œï¼Œä½¿ä¸‰ä¸ªçŸ©å½¢æ·¡å‡º</button>
+<button id="mFadeToggle">ç‚¹å‡»è¿™é‡Œï¼Œä½¿ä¸‰ä¸ªçŸ©å½¢æ·¡å…¥æ·¡å‡º</button>
+<button id="mFadeTo">ç‚¹å‡»è¿™é‡Œï¼Œä½¿ä¸‰ä¸ªçŸ©å½¢æ¸å˜ä¸ºç»™å®šçš„ä¸é€æ˜åº¦ï¼ˆå€¼ä»‹äº 0 ä¸ 1 ä¹‹é—´ï¼‰</button>
 <br><br>
 <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div>
 <br>
@@ -250,39 +250,39 @@ div#div6{
 <br>
 
 <div class="panel">
-<p>W3School - ÁìÏÈµÄ Web ¼¼Êõ½Ì³ÌÕ¾µã</p>
-<p>ÔÚ W3School£¬Äã¿ÉÒÔÕÒµ½ÄãËùĞèÒªµÄËùÓĞÍøÕ¾½¨Éè½Ì³Ì¡£</p>
+<p>W3School - é¢†å…ˆçš„ Web æŠ€æœ¯æ•™ç¨‹ç«™ç‚¹</p>
+<p>åœ¨ W3Schoolï¼Œä½ å¯ä»¥æ‰¾åˆ°ä½ æ‰€éœ€è¦çš„æ‰€æœ‰ç½‘ç«™å»ºè®¾æ•™ç¨‹ã€‚</p>
 </div>
  
-<p class="slideDown">ÏòÏÂ»¬¶¯ÔªËØ</p>
-<p class="slideUp">ÏòÉÏ»¬¶¯ÔªËØ</p>
-<p class="slideToggle">ÏòÏÂ»òÏòÉÏÇĞ»»»¬¶¯ÔªËØ</p>
+<p class="slideDown">å‘ä¸‹æ»‘åŠ¨å…ƒç´ </p>
+<p class="slideUp">å‘ä¸Šæ»‘åŠ¨å…ƒç´ </p>
+<p class="slideToggle">å‘ä¸‹æˆ–å‘ä¸Šåˆ‡æ¢æ»‘åŠ¨å…ƒç´ </p>
 <br/>
 
-<button id="animate">¿ªÊ¼¶¯»­</button>
-<p>Ä¬ÈÏÇé¿öÏÂ£¬ËùÓĞ HTML ÔªËØµÄÎ»ÖÃ¶¼ÊÇ¾²Ì¬µÄ£¬²¢ÇÒÎŞ·¨ÒÆ¶¯¡£ÈçĞè¶ÔÎ»ÖÃ½øĞĞ²Ù×÷£¬¼ÇµÃÊ×ÏÈ°ÑÔªËØµÄ CSS position ÊôĞÔÉèÖÃÎª relative¡¢fixed »ò absolute¡£</p>
+<button id="animate">å¼€å§‹åŠ¨ç”»</button>
+<p>é»˜è®¤æƒ…å†µä¸‹ï¼Œæ‰€æœ‰ HTML å…ƒç´ çš„ä½ç½®éƒ½æ˜¯é™æ€çš„ï¼Œå¹¶ä¸”æ— æ³•ç§»åŠ¨ã€‚å¦‚éœ€å¯¹ä½ç½®è¿›è¡Œæ“ä½œï¼Œè®°å¾—é¦–å…ˆæŠŠå…ƒç´ çš„ CSS position å±æ€§è®¾ç½®ä¸º relativeã€fixed æˆ– absoluteã€‚</p>
 <div id="div4" style="background:#98bf21;height:100px;width:100px;position:relative;">
 </div>
 <br/>
 
-<button id="start">¿ªÊ¼</button>
-<button id="stop">Í£Ö¹</button>
-<button id="stop2">Í£Ö¹ËùÓĞ</button>
-<button id="stop3">Í£Ö¹µ«ÒªÍê³É</button>
-<p><b>"¿ªÊ¼"</b> °´Å¥»áÆô¶¯¶¯»­¡£</p>
-<p><b>"Í£Ö¹"</b> °´Å¥»áÍ£Ö¹µ±Ç°»î¶¯µÄ¶¯»­£¬µ«ÔÊĞíÒÑÅÅ¶ÓµÄ¶¯»­ÏòÇ°Ö´ĞĞ¡£</p>
-<p><b>"Í£Ö¹ËùÓĞ"</b> °´Å¥Í£Ö¹µ±Ç°»î¶¯µÄ¶¯»­£¬²¢Çå¿Õ¶¯»­¶ÓÁĞ£»Òò´ËÔªËØÉÏµÄËùÓĞ¶¯»­¶¼»áÍ£Ö¹¡£</p>
-<p><b>"Í£Ö¹µ«ÒªÍê³É"</b> »áÁ¢¼´Íê³Éµ±Ç°»î¶¯µÄ¶¯»­£¬È»ºóÍ£ÏÂÀ´¡£</p> 
+<button id="start">å¼€å§‹</button>
+<button id="stop">åœæ­¢</button>
+<button id="stop2">åœæ­¢æ‰€æœ‰</button>
+<button id="stop3">åœæ­¢ä½†è¦å®Œæˆ</button>
+<p><b>"å¼€å§‹"</b> æŒ‰é’®ä¼šå¯åŠ¨åŠ¨ç”»ã€‚</p>
+<p><b>"åœæ­¢"</b> æŒ‰é’®ä¼šåœæ­¢å½“å‰æ´»åŠ¨çš„åŠ¨ç”»ï¼Œä½†å…è®¸å·²æ’é˜Ÿçš„åŠ¨ç”»å‘å‰æ‰§è¡Œã€‚</p>
+<p><b>"åœæ­¢æ‰€æœ‰"</b> æŒ‰é’®åœæ­¢å½“å‰æ´»åŠ¨çš„åŠ¨ç”»ï¼Œå¹¶æ¸…ç©ºåŠ¨ç”»é˜Ÿåˆ—ï¼›å› æ­¤å…ƒç´ ä¸Šçš„æ‰€æœ‰åŠ¨ç”»éƒ½ä¼šåœæ­¢ã€‚</p>
+<p><b>"åœæ­¢ä½†è¦å®Œæˆ"</b> ä¼šç«‹å³å®Œæˆå½“å‰æ´»åŠ¨çš„åŠ¨ç”»ï¼Œç„¶ååœä¸‹æ¥ã€‚</p> 
 
 <div id="div5" style="background:#98bf21;height:100px;width:200px;position:relative;">Hello World!</div>
 
-<p id="test1">ÕâÊÇ¶ÎÂäÖĞµÄ<b>´ÖÌå</b>ÎÄ±¾¡£</p>
-<input type="text" id="test2" value="Ã×ÀÏÊó"></p>
+<p id="test1">è¿™æ˜¯æ®µè½ä¸­çš„<b>ç²—ä½“</b>æ–‡æœ¬ã€‚</p>
+<input type="text" id="test2" value="ç±³è€é¼ "></p>
 <p><a href="http://www.w3school.com.cn" id="test3">W3School.com.cn</a></p>
-<button id="btn1">ÏÔÊ¾ÎÄ±¾</button>
-<button id="btn2">ÏÔÊ¾ HTML</button>
-<button id="btn3">ÏÔÊ¾Öµ</button>
-<button id="btn4">ÏÔÊ¾ href Öµ</button>
+<button id="btn1">æ˜¾ç¤ºæ–‡æœ¬</button>
+<button id="btn2">æ˜¾ç¤º HTML</button>
+<button id="btn3">æ˜¾ç¤ºå€¼</button>
+<button id="btn4">æ˜¾ç¤º href å€¼</button>
 </br></br>
 <div id="div6">jQuery</div>
 </br>
@@ -292,21 +292,21 @@ div#div6{
 <button id="before">before</button>
 <button id="remove">remove</button>
 <button id="empty">empty</button>
-<h1 id="changeCSS">²Ù×÷CSSÔªËØ</h1>
-<button id="addClass">ÏòÔªËØÌí¼Ó CSS Àà</button>
-<button id="removeClass">´ÓÔªËØÉ¾³ı CSS Àà</button>
-<button id="toggleClass">ÇĞ»» CSS Àà</button>
-<button id="css">ÉèÖÃ CSS ÊôĞÔ</button>
+<h1 id="changeCSS">æ“ä½œCSSå…ƒç´ </h1>
+<button id="addClass">å‘å…ƒç´ æ·»åŠ  CSS ç±»</button>
+<button id="removeClass">ä»å…ƒç´ åˆ é™¤ CSS ç±»</button>
+<button id="toggleClass">åˆ‡æ¢ CSS ç±»</button>
+<button id="css">è®¾ç½® CSS å±æ€§</button>
 <br/>
 <br/>
 
 <div id="div7" style="height:150px;width:500px;padding:10px;margin:5px;border:2px solid blue;background-color:lightblue;"></div>
-<button id="showWidthHeight">ÏÔÊ¾ div µÄ³ß´ç</button>
+<button id="showWidthHeight">æ˜¾ç¤º div çš„å°ºå¯¸</button>
 <br/>
 <br/>
 <div id="div8"><div/>
-<button id="myAJAXLoad">AJAX:»ñµÃÍâ²¿ÄÚÈİ</button>
-<button id="myAJAXGet">AJAX:ÏòÒ³Ãæ·¢ËÍ HTTP GET ÇëÇó£¬È»ºó»ñµÃ·µ»ØµÄ½á¹û</button>
-<button id="myAJAXPost">AJAX:ÏòÒ³Ãæ·¢ËÍ HTTP POST ÇëÇó£¬²¢»ñµÃ·µ»ØµÄ½á¹û</button>
+<button id="myAJAXLoad">AJAX:è·å¾—å¤–éƒ¨å†…å®¹</button>
+<button id="myAJAXGet">AJAX:å‘é¡µé¢å‘é€ HTTP GET è¯·æ±‚ï¼Œç„¶åè·å¾—è¿”å›çš„ç»“æœ</button>
+<button id="myAJAXPost">AJAX:å‘é¡µé¢å‘é€ HTTP POST è¯·æ±‚ï¼Œå¹¶è·å¾—è¿”å›çš„ç»“æœ</button>
 </body>
 </html> 
