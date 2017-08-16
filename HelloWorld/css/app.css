@@ -1,0 +1,31 @@
+.mui-slider-indicator .mui-active.mui-indicator
+{
+    background: #00adef;
+}
+
+.mui-card-content{
+	height:200px;
+}
+
+.mui-card-content img{
+	width: 100%; 
+	height: 100%;
+}
+
+.mui-content{
+	padding: 16px;
+}
+
+.mui-content .mui-row .mui-col-xs-3{
+	text-align: center;
+}
+
+.mui-content .mui-row .mui-col-xs-3 img{
+	width: 50%;
+	height: 50%;
+}
+
+.mui-content .mui-row .mui-col-xs-3 p{
+	color: #333333;
+	margin-top: 5px;
+}

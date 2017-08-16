@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/app.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init({
+		  pullRefresh : {
+		    container:"#refreshContainer",//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+		    //上拉加载
+		    up : {
+		      height:50,//可选.默认50.触发上拉加载拖动距离
+		      auto:false,//可选,默认false.自动上拉加载一次		
+		      contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+		      contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+		      callback :function(){
+		      	 var r=this;
+		      	 setTimeout(function(){
+		      	 	 var a=$('#list');
+			      	 var num=a.children().length;		   
+			      	 for(var i=1;i<4;i++){				      	
+			      	 	a.append('<li class="mui-table-view-cell"><a class="mui-navigate-right">Item '+(num+i)+'</a></li>')
+			      	 }
+		      	 	 if(num+3>20)
+		      	        r.endPullupToRefresh(true);
+		      	     else
+		      	        r.endPullupToRefresh(false);
+		      	 },1000)
+		      	 	
+		      } //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+		    },
+		    //下拉刷新
+		    down : {
+      			height:50,//可选,默认50.触发下拉刷新拖动距离,
+			    auto: false,//可选,默认false.首次加载自动下拉刷新一次
+			    contentdown : "下拉可以刷新",//可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+			    contentover : "释放立即刷新",//可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+			    contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+			    callback :function(){
+			    	var r=this;
+			    	setTimeout(function(){
+			    		location.reload(true);//以 GET 方式，从服务端取最新的页面, 相当于客户端点击 F5("刷新")
+			    		r.endPulldownToRefresh(false);
+			    	},1000)
+			    } //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+			}
+		  }
+		});  
+    </script>
+</head>
+<body>
+<div id="refreshContainer" class="mui-scroll-wrapper">
+	<div>	
+	<div id="slider" class="mui-slider">
+	  <div class="mui-slider-group mui-slider-loop">
+	    <!--支持循环，需要重复图片节点-->
+	    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner4.jpg" /></a></div>
+	    <div class="mui-slider-item"><a href="#"><img src="images/banner1.jpg" /></a></div>
+	    <div class="mui-slider-item"><a href="#"><img src="images/banner2.jpg" /></a></div>
+	    <div class="mui-slider-item"><a href="#"><img src="images/banner3.jpg" /></a></div>
+	    <div class="mui-slider-item"><a href="#"><img src="images/banner4.jpg" /></a></div>
+	    <!--支持循环，需要重复图片节点-->
+	    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner1.jpg" /></a></div>
+	  </div>
+	    <div class="mui-slider-indicator">
+	        <div class="mui-indicator mui-active"></div>
+	        <div class="mui-indicator"></div>
+	        <div class="mui-indicator"></div>
+	        <div class="mui-indicator"></div>
+	    </div>
+	</div>
+	
+	<div class="mui-content">
+	    <div class="mui-row">
+	        <div class="mui-col-xs-3">
+	            <div><img src="images/logo.png"/></div>
+	            <p>选项A</p>
+	        </div>
+	        <div class="mui-col-xs-3">
+	           <div><img src="images/logo.png"/></div>
+	            <p>选项B</p>
+	        </div>
+	        <div class="mui-col-xs-3">
+	           <div><img src="images/logo.png"/></div>
+	            <p>选项C</p>
+	        </div>
+	        <div class="mui-col-xs-3">
+	           <div><img src="images/logo.png"/></div>
+	            <p>选项D</p>
+	        </div>
+	    </div>
+   </div>
+	
+	<ul class="mui-table-view mui-grid-view mui-grid-9">
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    <a href="#">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <div class="mui-media-body">Home</div>
+		    </a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    <a href="#">
+		        <span class="mui-icon mui-icon-email"><span class="mui-badge mui-badge-red">5</span></span>
+		        <div class="mui-media-body">Email</div>
+		    </a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    <a href="#">
+		        <span class="mui-icon mui-icon-chatbubble"></span>
+		        <div class="mui-media-body">Chat</div>
+		    </a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    <a href="#">
+		        <span class="mui-icon mui-icon-location"></span>
+		        <div class="mui-media-body">Location</div>
+		    </a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    <a href="#">
+		        <span class="mui-icon mui-icon-search"></span>
+		        <div class="mui-media-body">Search</div>
+		    </a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    <a href="#">
+		        <span class="mui-icon mui-icon-phone"></span>
+		        <div class="mui-media-body">Phone</div>
+		    </a>
+		</li>
+	</ul>
+	
+	
+	<div class="mui-card">
+		<!--页眉，放置标题-->
+		<div class="mui-card-header mui-card-media">
+			<img src="images/logo.png"/>
+			<div class="mui-media-body">
+				小M
+				<p>掏出来搞事情</p>
+			</div>
+		</div>
+		<!--内容区-->
+		<div class="mui-card-content"><img src="images/card.jpg"/></div>
+		<!--页脚，放置补充信息或支持的操作-->
+		<div class="mui-card-footer">
+			<a>Like</a>
+			<a>Comment</a>
+			<a>Read more</a>
+		</div>
+	</div>
+
+     
+		<ul id="list" class="mui-table-view">
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right">Item 1</a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right">Item 2</a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right">Item 3</a>
+			    </li>
+		</ul>		
+	</div>
+</div>
+</body>
+<script>
+	//自动轮播
+  	//获得slider插件对象
+	var gallery = mui('#slider');
+	gallery.slider({
+	  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+	});
+	
+	//列表点击事件
+    $('#list').on('tap','.mui-table-view-cell',function(){
+    	mui.alert('你点击了'+$(this).find('a').text(),'提示')
+    })
+</script>
+</html>
