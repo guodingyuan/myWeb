@@ -1,4 +1,4 @@
-# myhtml
+# myWeb
 
 HTML+CSS+JavaScript学习练手
 
